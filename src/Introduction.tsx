@@ -1,6 +1,6 @@
 import React, { CSSProperties, useEffect, useState } from "react";
 import ProfilePic from "./assets/ProfilePicture.png";
-import bgImg from "./assets/fahadWithBackGround2.png";
+import bgImg from "./assets/fahadWithBackGround2.jpg";
 import bgImg2 from "./assets/OnlyBackGround2.png";
 import gitHub from "./assets/gitbhub.png";
 import linkedin from "./assets/linkedin.png";
@@ -38,7 +38,7 @@ const Intro: React.FC = () => {
           className="profile-image"
         />
       </div>
-      <div className="content-section">
+      <div className="content-section" style={styles.contentSection}>
         <h1 style={styles.headings} className="headings">
           I'm a Game Developer | Web Developer
         </h1>
@@ -99,6 +99,12 @@ const styles: { [key: string]: CSSProperties } = {
     boxSizing: "border-box",
     transition: "all 0.3s ease-in-out",
   },
+
+  // contentSection: {
+  //   backgroundColor: "red",
+  //   marginRight: "50%",
+  // },
+
   headings: {
     color: "#ffffff",
     fontSize: "40px",
