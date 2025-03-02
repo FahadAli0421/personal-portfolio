@@ -9,10 +9,12 @@ const NavBar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string, offset: number = 100) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      const yOffset =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
     }
   };
 
@@ -39,13 +41,28 @@ const NavBar: React.FC = () => {
           </button>
         </li>
         <li>
-          <button className="button">Projects</button>
+          <button
+            className="button"
+            onClick={() => scrollToSection("Projects_Section", 100)} // Offset applied
+          >
+            Projects
+          </button>
         </li>
         <li>
-          <button className="button">Services</button>
+          <button
+            className="button"
+            onClick={() => scrollToSection("services-section")}
+          >
+            Services
+          </button>
         </li>
         <li>
-          <button className="button">Contact</button>
+          <button
+            className="button"
+            onClick={() => scrollToSection("Contact-Portion")}
+          >
+            Contact
+          </button>
         </li>
       </ul>
     </nav>

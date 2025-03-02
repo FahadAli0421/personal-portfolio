@@ -14,7 +14,7 @@
   padding-bottom: 15px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: white;
+  color: rgba(13, 25, 49, 1);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -23,26 +23,56 @@
 }
 
 .projects-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #4f98ff, #60a5fa, #4f98ff);
-    border-radius: 2px;
-    animation: slideIn 1.5s ease-in-out infinite;
-  }
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: rgba(13, 25, 49, 1);
+  border-radius: 2px;
+  animation: slideIn 1.5s ease-in-out infinite;
+}
+
 .projects-container .project-card {
   background-color: rgba(13, 25, 49, 1);
-  border: 1px solid #ddd;
+  border: 1px solid #1c304a;
   border-radius: 8px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
   margin: 10px;
   padding: 20px;
   width: 300px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.projects-container .project-card:hover {
+  transform: scale(1.03) perspective(1000px) rotateY(3deg);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 35, 60, 1); /* Slightly brighter than original */
+}
+
+/* Subtle glowing border effect */
+.projects-container .project-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg, rgba(0, 153, 255, 0.2), rgba(255, 0, 255, 0.2));
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.projects-container .project-card:hover::before {
+  opacity: 1;
 }
 
 .projects-container .carousel {
@@ -90,6 +120,7 @@
 }
 
 .projects-container h2 {
+  color: white;
   margin: 15px 0 10px;
   font-size: 1.5em;
 }

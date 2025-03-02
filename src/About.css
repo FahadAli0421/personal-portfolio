@@ -1,257 +1,277 @@
 .about-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1a3d7c 0%, #2563eb 35%, #4f98ff 50%, #2563eb 65%, #1a3d7c 100%);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    padding: 40px 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #1a3d7c 0%,
+    #2563eb 35%,
+    #4f98ff 50%,
+    #2563eb 65%,
+    #1a3d7c 100%
+  );
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 40px 20px;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(13, 25, 49, 0.8);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content h2 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 100px;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  animation: float 3s ease-in-out infinite;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #4f98ff, #60a5fa, #4f98ff);
+  border-radius: 2px;
+  animation: slideIn 1.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .about-content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgba(13, 25, 49, 0.8);
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-    position: relative;
-    overflow: hidden;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  .about-content h2 {
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 100px;
-    position: relative;
-    padding-bottom: 15px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0;
   }
-  
-  .about-content h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  50% {
     width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #4f98ff, #60a5fa, #4f98ff);
-    border-radius: 2px;
-    animation: slideIn 1.5s ease-in-out infinite;
   }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+  100% {
+    width: 0;
   }
-  
-  @keyframes slideIn {
-    0% {
-      width: 0;
-    }
-    50% {
-      width: 100px;
-    }
-    100% {
-      width: 0;
-    }
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  perspective: 1000px;
+  margin-bottom: 50px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width: 280px;
+  height: 360px;
+  left: 50%;
+  top: 50%;
+  margin-left: -140px;
+  margin-top: -180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center center center;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.blurred {
+  filter: blur(4px);
+  opacity: 0.8;
+}
+
+.card {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e40af 100%);
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  color: white;
+  animation: fadeInCard 1s ease-in-out;
+  overflow: hidden;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: white;
+  animation: slideInText 1s ease-in-out;
+}
+
+.card ul {
+  font-size: 14px;
+  line-height: 1.4;
+  color: white;
+  animation: slideInText 1.5s ease-in-out;
+  padding-left: 20px;
+}
+
+.card ul li {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.card .highlight {
+  font-weight: bold;
+}
+
+.card .project-name {
+  font-weight: bold;
+}
+
+.card .sub-list {
+  list-style-type: circle;
+  margin-left: 20px;
+  color: white;
+  font-size: 13px;
+}
+
+.nav-button {
+  background-color: rgba(37, 99, 235, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+  background-color: rgba(59, 130, 246, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.left {
+  left: 10px;
+}
+
+.nav-button.right {
+  right: 10px;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.mobile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-section.mobile {
+  padding: 20px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e40af 100%);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .carousel-container {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Reduced height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 40px 0;
-    perspective: 1000px;
-    margin-bottom: 50px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .carousel {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s;
+}
+
+@media (max-width: 605px) {
+  .about-container {
+    padding: 20px 10px;
+    margin-top: 200px;
   }
-  
-  .carousel__cell {
-    position: absolute;
-    width: 280px; /* Reduced width */
-    height: 360px; /* Reduced height */
-    left: 50%;
-    top: 50%;
-    margin-left: -140px; /* Adjusted margin */
-    margin-top: -180px; /* Adjusted margin */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: center center center;
+
+  .about-content {
+    padding: 25px 15px;
   }
-  
-  .card {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e40af 100%);
-    border-radius: 12px;
-    padding: 15px; /* Reduced padding */
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    color: white;
-    animation: fadeInCard 1s ease-in-out;
-    overflow: hidden; /* Prevent overflow */
+
+  .about-content h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
   }
-  
-  .card h3 {
-    font-size: 22px; /* Smaller heading */
-    margin-bottom: 10px; /* Reduced margin */
-    color: white;
-    animation: slideInText 1s ease-in-out;
-  }
-  
-  .card ul {
-    font-size: 14px; /* Smaller font size */
-    line-height: 1.4; /* Adjusted line height */
-    color: white;
-    animation: slideInText 1.5s ease-in-out;
-    padding-left: 20px; /* Added padding */
-  }
-  
-  .card ul li {
-    color: white;
-    margin-bottom: 8px; /* Added spacing */
-  }
-  
-  .card .highlight {
-    font-weight: bold;
-  }
-  
-  .card .project-name {
-    font-weight: bold;
-  }
-  
-  .card .sub-list {
-    list-style-type: circle;
-    margin-left: 20px;
-    color: white;
-    font-size: 13px; /* Smaller font size */
-  }
-  
-  .nav-button {
-    background-color: rgba(37, 99, 235, 0.8);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+
+  .about-section.mobile h3 {
     font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
-  
-  .nav-button:hover {
-    background-color: rgba(59, 130, 246, 1);
-    transform: translateY(-50%) scale(1.1);
+
+  .about-section.mobile ul li {
+    font-size: 15px;
   }
-  
-  .nav-button.left {
-    left: 10px;
+
+  .sub-list {
+    padding-left: 15px !important;
   }
-  
-  .nav-button.right {
-    right: 10px;
-  }
-  
-  .slide-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 0 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .indicator.active {
-    background-color: white;
-    transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  }
-  
-  .mobile-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .about-section.mobile {
-    padding: 20px;
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e40af 100%);
-    border-radius: 12px;
-    margin-bottom: 15px;
-    animation: fadeIn 0.5s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @media (max-width: 605px) {
-    .about-container {
-      padding: 20px 10px;
-      margin-top: 200px;
-    }
-  
-    .about-content {
-      padding: 25px 15px;
-    }
-  
-    .about-content h2 {
-      font-size: 30px;
-      margin-bottom: 25px;
-    }
-  
-    .about-section.mobile h3 {
-      font-size: 22px;
-    }
-  
-    .about-section.mobile ul li {
-      font-size: 15px;
-    }
-  
-    .sub-list {
-      padding-left: 15px !important;
-    }
-  }
+}

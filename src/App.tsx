@@ -3,6 +3,8 @@ import NavBar from "./NavBar.tsx";
 import Intro from "./Introduction.tsx";
 import About from "./About.tsx";
 import Projects from "./Projects.tsx";
+import Services from "./Services.tsx";
+import Contact from "./Contact.tsx";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +15,8 @@ const App: React.FC = () => {
           <Intro />
           <About />
           <Projects />
+          <Services />
+          <Contact />
         </div>
       </div>
     </div>

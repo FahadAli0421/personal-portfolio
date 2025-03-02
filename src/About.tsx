@@ -18,7 +18,8 @@ const About: React.FC = () => {
             <li>
               <span className="project-name">Bazooka Blast</span> - I
               participated in MLabs Game Jam and created Bazooka Blast game and
-              i got in top 11 teams out of 180 and got Best Game Physics Award.
+              got in top 11 teams out of 180 and won the Best Game Physics
+              Award.
             </li>
           </ul>
           <li>
@@ -42,7 +43,7 @@ const About: React.FC = () => {
             </li>
             <li>
               <span className="project-name">Portfolio</span> - This portfolio
-              Website using React.
+              website using React.
             </li>
           </ul>
           <li>
@@ -53,7 +54,7 @@ const About: React.FC = () => {
       ),
     },
     {
-      title: "Experience",
+      title: "Experiences",
       content: (
         <ul>
           <li>
@@ -122,11 +123,13 @@ const About: React.FC = () => {
               {sections.map((section, index) => (
                 <div
                   key={index}
-                  className="carousel__cell"
+                  className={`carousel__cell ${
+                    index !== currentSlide ? "blurred" : ""
+                  }`}
                   style={{
                     transform: `rotateY(${
                       (360 / sections.length) * index
-                    }deg) translateZ(200px)`, // Reduced translateZ
+                    }deg) translateZ(200px)`,
                   }}
                 >
                   <div className="card">

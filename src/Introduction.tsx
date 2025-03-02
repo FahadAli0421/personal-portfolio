@@ -21,9 +21,9 @@ const Intro: React.FC = () => {
     <div
       style={{
         ...styles.intro,
-        flexDirection: isMobile ? "column" : "row", // Change flex direction for small screens
+        flexDirection: isMobile ? "column" : "row",
         backgroundImage: `url(${isMobile ? bgImg2 : bgImg})`,
-        backgroundColor: "#007fbc", // Match navbar color
+        backgroundColor: "#007fbc",
       }}
       className="intro-container"
     >
@@ -40,14 +40,14 @@ const Intro: React.FC = () => {
       </div>
       <div className="content-section">
         <h1 style={styles.headings} className="headings">
-          I'm a Game Developer
+          I'm a Game Developer | Web Developer
         </h1>
         <h1 style={styles.headings} className="headings">
           Fahad Ali
         </h1>
         <p style={styles.para}>
-          I specialize in building interactive and engaging games, focusing on
-          creativity, mechanics, and storytelling.
+          I specialize in building interactive and engaging games and web
+          applications, focusing on creativity, mechanics, and storytelling.
         </p>
         <div className="social-links">
           <a
@@ -97,11 +97,11 @@ const styles: { [key: string]: CSSProperties } = {
     padding: "0",
     margin: "0",
     boxSizing: "border-box",
-    transition: "all 0.3s ease-in-out", // Smooth transition when resizing
+    transition: "all 0.3s ease-in-out",
   },
   headings: {
     color: "#ffffff",
-    fontSize: "48px",
+    fontSize: "40px",
     margin: "10px 0",
     fontFamily: "'Poppins', sans-serif",
     fontWeight: "bold",

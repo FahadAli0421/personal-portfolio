@@ -45,17 +45,19 @@ const projects: Project[] = [
     id: 1,
     title: "Bazooka Blast",
     description:
-      "A hyper-casual 3D shooter game developed in Unity, featuring a slingshot mechanic using a cannon. Players must destroy structures and enemies across 12 levels, with destructible environments and gravity-based physics.",
+      "A hyper-casual 3D shooter game developed in Unity for Android, featuring a slingshot mechanic using a cannon. Players must destroy structures and enemies across 12 levels, with destructible environments and gravity-based physics.",
     images: [BazookaBlast1, BazookaBlast2, BazookaBlast3],
-    downloadLink: "#",
+    downloadLink:
+      "https://drive.google.com/file/d/1BT4P5XoJoLBJVhlHyu8KT7tscqGE5LqT/view?usp=sharing",
   },
   {
     id: 2,
     title: "Echoes Of Vengeance",
     description:
-      "A 2D side-scrolling game developed in Unity, set in a medieval fantasy world with a deep narrative. The player, a Lunari survivor, must navigate obstacles, solve puzzles, and sneak past enemies while uncovering the fate of their clan.",
+      "A 2D side-scrolling game developed in Unity for PC, set in a medieval fantasy world with a deep narrative. The player, a Lunari survivor, must navigate obstacles, solve puzzles, and sneak past enemies while uncovering the fate of their clan.",
     images: [EOV1, EOV2, EOV3, EOV4, EOV5, EOV6],
-    downloadLink: "#",
+    downloadLink:
+      "https://drive.google.com/file/d/1eGu7U75y2hybX-sWxFj-ryd03NBYXYIZ/view?usp=sharing",
   },
   {
     id: 3,
@@ -87,7 +89,8 @@ const projects: Project[] = [
     description:
       "A simple web-based game inspired by the Chrome Dino Runner, built with HTML, CSS, and JavaScript. Players control a ball, avoiding obstacles with jump and double-jump mechanics while aiming for a high score.",
     images: [BallRunner1, BallRunner2, BallRunner3, BallRunner4, BallRunner5],
-    downloadLink: "#",
+    downloadLink:
+      "https://drive.google.com/file/d/1ARhnaYeM2fkqhkHvXkE5eHm9oSSOCmVP/view?usp=sharing",
   },
   {
     id: 6,
@@ -95,7 +98,8 @@ const projects: Project[] = [
     description:
       "A console-based C++ game where players must defend a wall from waves of zombies. By moving up and down and shooting bullets, players prevent enemies from reaching their base while maintaining a high score.",
     images: [PVZ1, PVZ2, PVZ3, PVZ4],
-    downloadLink: "#",
+    downloadLink:
+      "https://drive.google.com/file/d/14X9vpY_ASB-mUJKTvD7QZBrJAyv_T9wk/view?usp=sharing",
   },
 ];
 
@@ -123,7 +127,10 @@ const Projects: React.FC = () => {
 
   return (
     <div className="projects-container">
-      <h1 className="projects-heading">Projects</h1> {/* Added Heading */}
+      <h1 className="projects-heading" id="Projects_Section">
+        Projects
+      </h1>{" "}
+      {/* Added Heading */}
       {projects.map((project) => (
         <div key={project.id} className="project-card">
           <div className="carousel">
