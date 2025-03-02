@@ -1,0 +1,115 @@
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  width: 100vw;
+}
+
+.projects-heading {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 100px;
+  position: relative;
+  padding-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  animation: float 3s ease-in-out infinite;
+  width: 100%;
+}
+
+.projects-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f98ff, #60a5fa, #4f98ff);
+    border-radius: 2px;
+    animation: slideIn 1.5s ease-in-out infinite;
+  }
+.projects-container .project-card {
+  background-color: rgba(13, 25, 49, 1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.projects-container .carousel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.projects-container .carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.projects-container .carousel img.active {
+  opacity: 1;
+}
+
+.projects-container .dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.projects-container .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.projects-container .dot.active {
+  background-color: #717171;
+}
+
+.projects-container h2 {
+  margin: 15px 0 10px;
+  font-size: 1.5em;
+}
+
+.projects-container p {
+  font-size: 1em;
+  color: white;
+}
+
+.projects-container .download-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.projects-container .download-link:hover {
+  background-color: #0056b3;
+}

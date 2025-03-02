@@ -1,0 +1,135 @@
+/* General Navbar Styles */
+.navBar {
+  height: 10vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #1a3d7c 0%, #2563eb 35%, #4f98ff 50%, #2563eb 65%, #1a3d7c 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  padding: 0 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Logo Section */
+.navLogo .button {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLogo .button:hover {
+  color: #333333; /* Dark gray for hover */
+}
+
+/* Navigation Links */
+.navLists {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  margin-right: 8vw;
+  transition: all 0.3s ease;
+}
+
+.navLists.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #1a3d7c 0%, #2563eb 35%, #4f98ff 50%, #2563eb 65%, #1a3d7c 100%);
+  padding: 1rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  background: none;
+  border: none;
+  color: #ffffff; /* Non-hover color */
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #333333; /* Dark gray for underline effect */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.button:hover {
+  color: #333333; /* Dark gray for hover */
+}
+
+.button:hover::after {
+  width: 100%; /* Animated underline effect */
+}
+
+/* Hamburger Menu */
+.navHamBurger button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hide by default on larger screens */
+  margin-right: 10vw;
+}
+
+.navHamBurger img {
+  height: 30px;
+  width: 30px;
+  filter: invert(1); /* Make the icon white */
+  transition: transform 0.3s ease;
+}
+
+.navHamBurger img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.navBar button {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 605px) {
+  .navHamBurger button {
+    display: block; /* Show hamburger button on smaller screens */
+  }
+
+  .navLists {
+    display: none; /* Hide nav links by default on smaller screens */
+  }
+
+  .navLists.open {
+    display: flex; /* Show nav links when menu is open */
+  }
+
+  .navLogo .button {
+    font-size: 1.2rem; /* Adjust logo size for smaller screens */
+  }
+  
+}
