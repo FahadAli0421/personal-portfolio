@@ -7,8 +7,8 @@ import BazookaBlast3 from "./assets/MyGames/BazookaBlast/level5.png";
 import BootStomping1 from "./assets/MyGames/BootStomping/bootstomping1.jpeg";
 import BootStomping2 from "./assets/MyGames/BootStomping/bootstomping2.jpeg";
 import BootStomping3 from "./assets/MyGames/BootStomping/bootstomping3.jpeg";
-import BootStomping4 from "./assets/MyGames/BootStomping/bootstomping3.jpeg";
-import BootStomping5 from "./assets/MyGames/BootStomping/bootstomping3.jpeg";
+import BootStomping4 from "./assets/MyGames/BootStomping/bootstomping4.jpeg";
+import BootStomping5 from "./assets/MyGames/BootStomping/bootstomping5.jpeg";
 
 import EndlessWheels1 from "./assets/MyGames/EndlessWheels/EndlessWheels1.jpg";
 import EndlessWheels2 from "./assets/MyGames/EndlessWheels/EndlessWheels2.jpg";
@@ -55,7 +55,7 @@ const projects: Project[] = [
     images: [
       BootStomping1,
       BootStomping2,
-      BootStomping1,
+      BootStomping3,
       BootStomping4,
       BootStomping5,
     ],
